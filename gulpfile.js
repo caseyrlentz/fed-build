@@ -7,7 +7,7 @@ var jsHybristDest = '../hybris/bin/aramark/arsmvcstore/web/webroot/script';
 var jsWebServerDest = '/Library/WebServer/Documents/script'
 var hybrisDest = '../hybris/bin/aramark/arsmvcstore/web/webroot/style/ars';
 var webserverDest = '/Library/WebServer/Documents/style/ars';
-var devUrl = 'MY LOCAL DEV URL';
+var devUrl = 'http://localhost/webstore/locationoverview.action';
 
 gulp.task('hybrisCSS', function(){
     return buildCSS(src + '/**/*.scss', hybrisDest);
@@ -36,8 +36,7 @@ gulp.task('reload', function(){
 });
 
 gulp.task('watch', ['browser-sync'],function() {
-    gulp.watch(src + '/**/*.scss',['hybrisCSS','webserverCSS','reload']);
-    gulp.watch(jsSrc + '/**/*.js',['jsBuildHyberist','jsBuildWebServer','reload']);
+    gulp.watch([src + '/**/*.scss',jsSrc + '/**/*.js'],['hybrisCSS','webserverCSS','jsBuildHyberist','jsBuildWebServer','reload']);
 });
 
 function buildCSS(src, dest){
