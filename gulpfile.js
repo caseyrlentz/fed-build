@@ -2,10 +2,9 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var src = 'scss';
-var scssMain = src + '/scss-styles.scss';
 var hybrisDest = '../hybris/bin/aramark/arsmvcstore/web/webroot/style/ars';
 var webserverDest = '/Library/WebServer/Documents/style/ars';
-var devUrl = 'http://localhost/webstore/locationoverview.action';
+var devUrl = 'YOUR LOCAL URL';
 
 gulp.task('hybrisCSS', function(){
     return buildCSS(src + '/**/*.scss', hybrisDest);
