@@ -21,7 +21,7 @@ PROJECT DIRECTORY
 
 3. Run `npm install` - this will download all dependencies from the `package.json`.
 
-4. Copy any CSS file you need to work on into the `SCSS` folder and rename with the file extension `.scss`.
+4. Copy any CSS or JS file you need to work on into the `SCSS` or `js` folder. Working with css you must rename the css file with the file extension `.scss`.
 
 5. Change the `devUrl` variable in the `gulpfile.js` to your local url that you're working on.
 
@@ -29,7 +29,7 @@ PROJECT DIRECTORY
 
     * Launches a proxy server of your dev environement running on port 3000.
 
-    * Watches the source folder `SCSS/` for any changes. If changes are made process the SCSS into CSS and place in the destination folders. `/Library/WebServer/Documents/style/ars` & `../hybris/bin/aramark/arsmvcstore/web/webroot/style/ars`.
+    * Watches the source folder `SCSS/` and `js/` for any changes. If css changes are made process the SCSS into CSS and place in the destination folders. `/Library/WebServer/Documents/style/ars` & `../hybris/bin/aramark/arsmvcstore/web/webroot/style/ars`. If JS changes are made push the changes to the destination folders `/Library/WebServer/Documents/script` & `../hybris/bin/aramark/arsmvcstore/web/webroot/script`.
 
     * Auto reloads the browser injecting your new styles 
 
